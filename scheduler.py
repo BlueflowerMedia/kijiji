@@ -18,8 +18,9 @@ def job56():
     ads.job5()
     ads.job6()
 
-schedule.every(1).minutes.do(job1)
-schedule.every(2).minutes.do(job2)
+schedule.every(20).minutes.do(job12)
+schedule.every(20).minutes.do(job34)
+schedule.every(20).minutes.do(job56)
 
 while True:
     schedule.run_pending()
