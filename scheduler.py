@@ -1,26 +1,29 @@
 import schedule
 import time
 import datetime
-import testjob
+from adRunner import *
 
-def job12():
-    print(datetime.datetime.now())
-    ads.job1()
-    ads.job2()
+# Writes logs to log.txt
+def logger(log):
+    with open("log.txt", "a") as myfile:
+        myfile.write(log)
 
-def job34():
-    print(datetime.datetime.now())
-    ads.job3()
-    ads.job4()
+# Runs job batches with functions in adRunner.py
+def runJobs(job_list):
+    logger(str(datetime.datetime.now()))
+    for jobID in job_list:
+        adRunner(jobID)
+        # log = str(adRunner(jobID)) + "\n"
+        # logger(log[0])
+        # logger(log[1])
+    logger("\n")
 
-def job56():
-    print(datetime.datetime.now())
-    ads.job5()
-    ads.job6()
-
-schedule.every(20).minutes.do(job12)
-schedule.every(20).minutes.do(job34)
-schedule.every(20).minutes.do(job56)
+# scheduler
+schedule.every(60).minutes.do(runJobs,[1,2])
+time.sleep(1200)
+schedule.every(60).minutes.do(runJobs,[3,4])
+time.sleep(1200)
+schedule.every(60).minutes.do(runJobs,[5,6])
 
 while True:
     schedule.run_pending()

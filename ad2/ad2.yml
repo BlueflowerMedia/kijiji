@@ -18,6 +18,6 @@ topAdDuration: '7'
 submitType: saveAndCheckout
 postAdForm.description: ''
 categoryId: 752
-image_paths: [ad2/1.jpg, ad2/2.jpg, ad2/3.jpg, ad2/4.jpg]
+image_paths: [1.jpg, 2.jpg, 3.jpg, 4.jpg]
 username: bestplumber4hire@gmail.com
 password: Plumber4hire
