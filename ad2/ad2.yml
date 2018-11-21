@@ -1,23 +1,25 @@
-postAdForm.title: Residential and Commercial Plumbing in GTA | Licensed & Insured
-postAdForm.mapAddress: Scarborough
-postAdForm.phoneNumber: '4379940101'
+postAdForm.title: Commercial Cleaning Experts - Reasonable Rates - Professional
+postAdForm.mapAddress: 585 Dundas St E, Toronto, ON M5A 2B7, Canada
+postAdForm.phoneNumber: '6478644671'
 postAdForm.adType: OFFER
 postAdForm.city: Toronto
 postAdForm.province: Ontario
-postAdForm.postalCode: M1M 3N8
+postAdForm.postalCode: M5A 2B7
 postAdForm.addressCity: Toronto
 postAdForm.addressProvince: Ontario
-postAdForm.addressPostalCode: M1M 3N8
-postAdForm.geocodeLat: '43.7309223111111'
-postAdForm.geocodeLng: '-79.2287041111111'
+postAdForm.addressPostalCode: M5A 2B7
+postAdForm.geocodeLat: '43.6598313'
+postAdForm.geocodeLng: '-79.3625777'
 postAdForm.locationId: 1700273
-PostalLat: '43.7309223111111'
-PostalLng: '-79.2287041111111'
+PostalLat: '43.6598313'
+PostalLng: '-79.3625777'
 locationLevel0: 1700272
 topAdDuration: '7'
 submitType: saveAndCheckout
-postAdForm.description: ''
-categoryId: 752
-image_paths: [1.jpg, 2.jpg, 3.jpg, 4.jpg]
-username: bestplumber4hire@gmail.com
-password: Plumber4hire
+postAdForm.description: We are a leading provider of commercial cleaning services
+  in Canada. Have your office, store, warehouse looking spotless. Contact us for a
+  site visit or an estimate.
+categoryId: 160
+image_paths: [image2.jpg]
+username: worldsgreatestcleaners@outlook.com
+password: fakepassword1
