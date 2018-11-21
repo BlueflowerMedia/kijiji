@@ -19,11 +19,17 @@ def runJobs(job_list):
     logger("\n")
 
 # scheduler
-schedule.every(60).minutes.do(runJobs,[1,2])
-time.sleep(1200)
-schedule.every(60).minutes.do(runJobs,[3,4])
-time.sleep(1200)
-schedule.every(60).minutes.do(runJobs,[5,6])
+# schedule.every(60).minutes.do(runJobs,[1,2])
+# time.sleep(1200)
+# schedule.every(60).minutes.do(runJobs,[3,4])
+# time.sleep(1200)
+# schedule.every(60).minutes.do(runJobs,[5,6])
 
+
+
+
+schedule.every(30).minutes.do(runJobs,[1])
+time.sleep(900)
+schedule.every(30).minutes.do(runJobs,[3])
 while True:
     schedule.run_pending()
