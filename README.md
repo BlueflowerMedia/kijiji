@@ -6,7 +6,9 @@
 
 The project requires python3 with: python-requests, bs4, pyyaml, schedule
 To install all dependencies, run:
-`pip install -r requirements.txt` or `pip3 install -r requirements.txt`
+
+`pip install -r requirements.txt`
+or `pip3 install -r requirements.txt`
 
 
 ## Usage
@@ -15,7 +17,7 @@ To install all dependencies, run:
 
 - Create a folder **ad#** i.e. ad1, ad2
 - Place all the photos in the folder
-- Create a yml file for the ad (either using the CLI the instruction in next section or editing exiting yml file)
+- Create a yml file for the ad in the same name as the folder (either using the CLI the instruction in next section or editing exiting yml file)
 - Create a schedule python file. Look at schedule1.py
 - Start the file with import statement `from adScheduler import *`
 - create a adSchedule class under any variable name with the following parameters
@@ -33,7 +35,7 @@ To install all dependencies, run:
 
 ### Creating, Posting and Reposting an ad using the CLI
 
-Create an ad using kijiji_repost_headless :
+Create an yml file for an ad using kijiji_repost_headless :
 
 `python kijiji_repost_headless build_ad`
 
