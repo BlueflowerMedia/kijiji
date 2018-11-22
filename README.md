@@ -27,11 +27,7 @@ or `pip3 install -r requirements.txt`
   - i.e. for ad66 repeated every 30 minutes that will start after 30 minutes:
   `ad1 = adSchedule(ad_id=66, repeat=30, delay=30)`
   - to initiate a schedule, run the start function for each ad. i.e. `ad1.start()`
-  - end the file with
-
-  `while True:
-      schedule.run_pending()`
-
+  - end the file with `while True: schedule.run_pending()`
 - to run the script, simply run `python **nameOfTheFile**`
 
 
