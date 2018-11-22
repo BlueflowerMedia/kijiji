@@ -18,7 +18,7 @@ or `pip3 install -r requirements.txt`
 - Create a folder **ad#** i.e. ad1, ad2
 - Place all the photos in the folder
 - Create a yml file for the ad in the same name as the folder (either using the CLI the instruction in next section or editing exiting yml file)
-- Create a schedule python file. (Look at [schedule1.py] for example)
+- Create a schedule python file. (Look at an example at [schedule1.py](schedule1.py))
   - Start the file with import statement `from adScheduler import *`
   - create a adSchedule class under any variable name with the following parameters
     - ad_id: this must match folder name of the ad yml file and ad yml filename
