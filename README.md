@@ -18,18 +18,20 @@ or `pip3 install -r requirements.txt`
 - Create a folder **ad#** i.e. ad1, ad2
 - Place all the photos in the folder
 - Create a yml file for the ad in the same name as the folder (either using the CLI the instruction in next section or editing exiting yml file)
-- Create a schedule python file. Look at schedule1.py
-- Start the file with import statement `from adScheduler import *`
-- create a adSchedule class under any variable name with the following parameters
-  - ad_id: this must match folder name of the ad yml file and ad yml filename
-  - repeat: interval in minutes at which the ad is reposted
-  - delay: number of minutes delayed before the ad is started
-- i.e. for ad66 repeated every 30 minutes that will start after 30 minutes:
-`ad1 = adSchedule(ad_id=66, repeat=30, delay=30)`
-- to initiate a schedule, run the start function for each ad. i.e. `ad1.start()`
-- end the file with
-`while True:
-    schedule.run_pending()`
+- Create a schedule python file. (Look at [schedule1.py] for example)
+  - Start the file with import statement `from adScheduler import *`
+  - create a adSchedule class under any variable name with the following parameters
+    - ad_id: this must match folder name of the ad yml file and ad yml filename
+    - repeat: interval in minutes at which the ad is reposted
+    - delay: number of minutes delayed before the ad is started
+  - i.e. for ad66 repeated every 30 minutes that will start after 30 minutes:
+  `ad1 = adSchedule(ad_id=66, repeat=30, delay=30)`
+  - to initiate a schedule, run the start function for each ad. i.e. `ad1.start()`
+  - end the file with
+
+  `while True:
+      schedule.run_pending()`
+
 - to run the script, simply run `python **nameOfTheFile**`
 
 
