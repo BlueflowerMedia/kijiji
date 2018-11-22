@@ -1,4 +1,4 @@
-postAdForm.title: Commercial Cleaning Experts - Reasonable Rates - Professional
+postAdForm.title: Testing service 2
 postAdForm.mapAddress: 585 Dundas St E, Toronto, ON M5A 2B7, Canada
 postAdForm.phoneNumber: '6478644671'
 postAdForm.adType: OFFER
@@ -16,10 +16,8 @@ PostalLng: '-79.3625777'
 locationLevel0: 1700272
 topAdDuration: '7'
 submitType: saveAndCheckout
-postAdForm.description: We are a leading provider of commercial cleaning services
-  in Canada. Have your office, store, warehouse looking spotless. Contact us for a
-  site visit or an estimate.
+postAdForm.description: 'Running a test ad'
 categoryId: 160
 image_paths: [image2.jpg]
-username: worldsgreatestcleaners@outlook.com
-password: fakepassword1
+username: fahim.shahreer95@gmail.com
+password: apqrl12321
