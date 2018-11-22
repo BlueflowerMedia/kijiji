@@ -1,26 +1,41 @@
-# Kijiji Repost Headless
+# Kijiji Scheduled Reposter
 
-#### Post ads on Kijiji
+#### Kijiji Scheduled Reposter
 
 ## Setup
 
-- This project requires python3 with: python-requests, bs4, pyyaml
-- Run `pip3 install -r requirements.txt` to install all dependencies
+The project requires python3 with: python-requests, bs4, pyyaml, schedule
+To install all dependencies, run:
+`pip install -r requirements.txt` or `pip3 install -r requirements.txt`
 
-## Requirements
-
-- The program currently requires that you post at LEAST one photo
-- As per Kijiji requirements, the item description must be at least 10 characters
 
 ## Usage
 
-### Generating an ad posting file
+### Using the script
 
-- Generate a posting file (item.yml) with the command `python kijiji_repost_headless build_ad` and follow the prompts
-- Place all photo dependencies in the path RELATIVE to item.yml 
-- It is recommended that you create separate folders for each ad that you wish to post and include item.yml and photos in the same directory
+- Create a folder **ad#** i.e. ad1, ad2
+- Place all the photos in the folder
+- Create a yml file for the ad (either using the CLI the instruction in next section or editing exiting yml file)
+- Create a schedule python file. Look at schedule1.py
+- Start the file with import statement `from adScheduler import *`
+- create a adSchedule class under any variable name with the following parameters
+  - ad_id: this must match folder name of the ad yml file and ad yml filename
+  - repeat: interval in minutes at which the ad is reposted
+  - delay: number of minutes delayed before the ad is started
+- i.e. for ad66 repeated every 30 minutes that will start after 30 minutes:
+`ad1 = adSchedule(ad_id=66, repeat=30, delay=30)`
+- to initiate a schedule, run the start function for each ad. i.e. `ad1.start()`
+- end the file with
+`while True:
+    schedule.run_pending()`
+- to run the script, simply run `python **nameOfTheFile**`
 
-### Posting and Reposting an ad
+
+### Creating, Posting and Reposting an ad using the CLI
+
+Create an ad using kijiji_repost_headless :
+
+`python kijiji_repost_headless build_ad`
 
 Post one ad (item.yml):
 
@@ -41,33 +56,3 @@ Delete all ads:
 Delete one ad (using ad id):
 
 `python kijiji_repost_headless [-u USERNAME] [-p PASSWORD] delete myAdId`
-
-## Project Structure
-
-```
-project
-│   README.md
-│   LICENSE
-│   requirements.txt
-│
-└───kijiji_repost_headless
-│   │   kijiji_api.py -> Interfaces with Kijiji
-│   │   generate_post_file.py -> Makes item.yml
-│   │   get_ids -> Used for retreiving kijiji location data
-│   │   kijiji_categories_attr.json -> Finds out what properties each item has
-│   │   kijiji_categories_attr.json -> Finds out what properties each item has
-│   │   save_attribute_map_to_json.py -> Remakes kijiji_categories_attr.json
-│   │   __main__.py -> Wraps kijiji_api.py for ease of use from command line, file is run when 'python kijiji_repost_headless' is run
-│   │
-└───tests
-```
-
-## Issues
-
-Please open a GitHub issue or pull request if you discover problems.
-
-## TODO
-
-- Better error handling
-- Avoid reuploading the same pictures again and again
-

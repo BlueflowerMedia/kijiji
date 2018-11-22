@@ -5,15 +5,15 @@ from adPoster import *
 
 class adSchedule:
 
-    def __init__(self, job_id, repeat, delay=0):
-        self.job_id = job_id
+    def __init__(self, ad_id, repeat, delay=0):
+        self.ad_id = ad_id
         self.repeat = repeat
         self.delay = delay
-        self.job_file = "ad" + str(self.job_id) + "/ad" + str(self.job_id) + ".yml"
+        self.job_file = "ad" + str(self.ad_id) + "/ad" + str(self.ad_id) + ".yml"
 
     def printHeader(self):
         logger(str(datetime.datetime.now()))
-        logger("AD#" + str(self.job_id) + " is being reposted every " + str(self.repeat) + " minutes\n")
+        logger("AD#" + str(self.ad_id) + " is being reposted every " + str(self.repeat) + " minutes\n")
         logger("AD FILE: " + str(self.job_file) + "\n")
 
     def printFooter(self, rc):
